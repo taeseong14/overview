@@ -2,8 +2,6 @@
 
 [yande.re](https://yande.re) 뜯어오는 애(가되고싶스뮤)
 
-[github Pages](https://yan.b-p.kro.kr)
-
 ---
 
 ## Todos

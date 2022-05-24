@@ -2,10 +2,6 @@
 
 노느냄 클리커
 
-[link](https://ck.b-p.kro.kr/)
-
-냠냐미
-
 ---
 
 ## To-do
