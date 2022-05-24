@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.fonts = [
+        'Fira Code',
+        'Arial',
+        'Alex Brush',
+        'MS Madi',
+        'Anton',
+        'Jazz Let',
+        'HeirofLightBold',
+        'SF_IceLemon',
+        'HSYuji',
+        'ACCchild',
+        'BMEuljirooraeorae',
+        ];
+    </script>
+    <style>
+        /* google font */
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton&family=Fira+Code:wght@300&family=Ms+Madi&display=swap');
+        
+        /* noonnu.cc */
+        @font-face {
+            font-family: 'HeirofLightBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'SF_IceLemon';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'HSYuji';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'ACCchild';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenheartOTF-Regular.woff') format('woff');
+        }
+        @font-face {
+            /* 저작권: 배민폰트 */
+            font-family: 'BMEuljirooraeorae';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/BMEuljirooraeorae.woff2') format('woff2');
+        }
+        
+        /* mollu */
+        @font-face {
+            font-family: 'Jazz LET';
+            src: url("//db.onlinewebfonts.com/t/f985d16a2f733847149d80c84f4c8425.woff") format("woff");
+        }
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Font Img maker</h1>
+    <main>
+        <div id="inputs">
+            <div id="fonts">
+                <select id="font"></select>
+                <span>
+                    <input type="text" id="font-size" value="30" maxlength="2">px
+                </span>
+                <span>
+                    #<input type="text" id="font-color" value="ffffff" maxlength="6">
+                </span>
+            </div>
+            <div id="text-div">
+                <form id="text">
+                    <input type="text" placeholder="text" autofocus autocomplete="off" id="input-text">
+                    <!-- <button>make</button> -->
+                </form>
+            </div>
+        </div>
+        <div id="div-canvas">
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

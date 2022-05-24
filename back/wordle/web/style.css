@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    /* overflow: hidden; */
+}
+
+#boxs {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-line {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+.box.green {
+    background-color: #7a7;
+}
+.box.yellow {
+    background-color: #dd5;
+}
+.box.gray {
+    background-color: #aaa;
+}
+
+#keyboard {
+    margin-top: 60px;
+}
+.keyboard-line {
+    display: flex;
+    justify-content: center;
+}
+.keyboard-line .key {
+    display: flex;
+    width: 40px;
+    height: 50px;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+.key.press {
+    transform: scale(0.9);
+}
+.key.green {
+    background-color: #7a7;
+}
+.key.yellow {
+    background-color: #dd5;
+}
+.key.gray {
+    background-color: #aaa;
+}

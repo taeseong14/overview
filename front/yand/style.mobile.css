@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow:scroll;
+    padding-bottom: 50px;
+}
+main div {
+    display: flex;
+    flex-direction: column;
+}
+main div a {
+    text-align: center;
+    padding: 10px;
+}
+main div img {
+    height: 300px;
+}
+main a {
+    color: #000;
+}

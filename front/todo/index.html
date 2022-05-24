@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo</title>
+</head>
+<body>
+    <header>
+        <h1>TODO</h1>
+    </header>
+    <main>
+        <form id="make-todo">
+            <div id="inputs">
+                <input type="text" id="make-input" autocomplete="off" placeholder="todo">
+                <input type="text" id="make-input-desc" autocomplete="off" placeholder="description">
+            </div>
+            <button>Add</button>
+        </form>
+        <details id="options">
+            <summary>options</summary>
+            <div id="option-inputs">
+                <input type="checkbox" id="check-deleted">
+                <label for="check-deleted">show deleted tasks</label>
+            </div>
+        </details>
+        <ul id="todos"></ul>
+    </main>
+    <div id="deleted">삭재댐 <span id="deleted-cancle">실행 취소</span></div>
+    <footer>
+        <button>Clear</button>
+        <button>Import</button>
+        <button>Export</button>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

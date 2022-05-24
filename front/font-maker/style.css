@@ -1,0 +1,127 @@
+:root {
+    /* shadow */
+    --shadow-in: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    --shadow-out: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    --shadow-in-dark: inset 6px 6px 12px #111, inset -6px -6px 6px #333;
+    --shadow-out-dark: 6px 6px 10px #111, -6px -6px 12px #333;
+
+    /* background */
+    
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #202124;
+    overflow: hidden;
+    color: #888;
+}
+input, select {
+    color: #888;
+}
+
+h1 {
+    text-align: center;
+    color: #ccc;
+    text-shadow: 2px 2px 7px #aaa;
+}
+
+main {
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-in-dark);
+    /* border: 1px solid #888; */
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #232427;
+}
+
+#fonts, #text, #canvas {
+    box-shadow: var(--shadow-out-dark);
+}
+
+#div-canvas {
+    text-align: center;
+}
+canvas {
+    border-radius: 10px;
+    /* box-shadow: var(--shadow-out); */
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 250px;
+}
+
+
+#font-size {
+    width: 16px;
+}
+#font-color {
+    width: 48px;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+}
+
+#text-div {
+    display: flex;
+    justify-content: center;
+}
+
+#text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    /* box-shadow: var(--shadow-out); */
+    /* border: 1px solid #888; */
+    margin: 20px 0 20px 0;
+    border-radius: 10px;
+    width: 70%;
+}
+#text input {
+    width: 300px;
+    height: 20px;
+    text-align: center;
+    border-color: #888;
+    border-width: 0 0 1px 0;
+    margin: 0 20px;
+}
+
+input {
+    background: none;
+    outline: 0;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+
+select {
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    background: none;
+    border: none;
+}
+
+#fonts {
+    display: flex;
+    justify-content: space-around;
+}
+#fonts > span > input {
+    margin: 0 5px;
+    border-color: #888;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+}
+
+#fonts {
+    /* box-shadow: var(--shadow-out); */
+    /* border: 1px solid #888; */
+    border-radius: 4px;
+    padding: 5px;
+}

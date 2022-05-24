@@ -1,0 +1,53 @@
+#heart {
+    display: flex;
+}
+
+#heart-left {
+    flex: 1;
+    height: 100%;
+    background-color: #ddf;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#heart-right {
+    flex: 1;
+    height: 100%;
+    background-color: #fdd;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#heart-first {
+    background-color: #fbb;
+    width: 30px;
+    height: 30px;
+    transition: var(--transition-speed2);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#heart-second {
+    background-color: #bbf;
+    width: 30px;
+    height: 30px;
+    transition: var(--transition-speed2);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#heart:hover #heart-first {
+    transition: transform var(--transition-speed);
+    transform-origin : 100% 0;
+    transform: skewy(40deg) scaleY(140%) translate(0, 30%);
+    border-top-left-radius: 6px;
+}
+#heart:hover #heart-second {
+    transition: transform var(--transition-speed);
+    transform-origin : 0 0;
+    transform: skewy(-40deg) scaleY(140%) translate(0, 30%);
+    border-top-right-radius: 6px;
+}

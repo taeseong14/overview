@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#tab {
+    width: 40%;
+    border: 1px solid;
+    margin: 0 auto 20px auto;
+    height: 200px;
+    padding: 10px;
+}
+
+#tab-titles {
+    display: flex;
+    justify-content: space-around;
+}
+#tab-titles > div {
+    flex: 1;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#tab-titles > div:first-child {
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#tab-titles > div:last-child {
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#tab-titles .active {
+    background-color: #ccc;
+}
+
+#tab-sections {
+    border: 1px solid #f00;
+    margin-top: 15px;
+    height: 75%;
+}
+
+#upgrades {
+    border: 1px solid #00f;
+    height: 120px;
+    /* overflow-y: scroll; */
+    padding: 5px;
+}
+#upgrades > div {
+    display: flex;
+    height: 40px;
+    border: 1px solid #000;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#upgrades .content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.content .level-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+}
+.content #content-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.content .desc {
+    font-size: 12px;
+    color: #888;
+}
+
+#upgrades img {
+    width: 40px;
+}
+
+
+
+#app-img {
+    width: 200px;
+}

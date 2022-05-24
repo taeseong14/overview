@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <details>
+        <summary>인풋들</summary>
+        <div id="inputs">
+            <section id="text">
+                <input type="text" placeholder="text">
+                <input type="email" placeholder="email">
+                <input type="password" placeholder="pw">
+                <input type="search" placeholder="search">
+                <input type="tel" placeholder="tel">
+                <input type="url" placeholder="url">
+                <input type="number" placeholder="num">
+            </section>
+            <section id="button">
+                <input type="button" value="button">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </section>
+            <section id="mini-button">
+                <span id="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </span>
+                <span id="radio">
+                    <input type="radio" name="radio">
+                    <input type="radio" name="radio">
+                </span>
+            </section>
+            <section id="mollu">
+                <input type="image" src="https://raw.githubusercontent.com/taeseong14/chat/main/src/views/imgs/emoji/%EB%AA%B0%EB%A3%A8/%EB%AA%B0%EB%A3%A8.webp" alt="alt">
+                <input type="color">
+                <input type="file">
+                <input type="range">
+            </section>
+            <section id="time">
+                <input type="date">
+                <input type="week">
+                <input type="month">
+                <input type="time">
+                <input type="datetime-local">
+            </section>
+            <input type="hidden">
+        </div>
+    </details>
+    
+    <div>
+        <meter min="0" max="100" low="30" high="70" optimum="0" value="50"></meter>
+        <script>
+            const meter = document.querySelector('meter');
+            let i = 0;
+            setInterval(() => {
+                meter.value = i++;
+                if (i > meter.max) i = 0;
+            }, 50)
+        </script>
+    </div>
+    
+    <label for="input">search</label>
+    <input id="input" type="text" list="datalist">
+    <datalist id="datalist">
+        <option value="hi" />
+        <option value="bye" />
+        <option value="sans" />
+    </datalist>
+    
+</body>
+</html>

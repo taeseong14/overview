@@ -1,0 +1,29 @@
+header {
+    text-align: center;
+}
+header a {
+    color: #000;
+}
+
+#pics {
+    width: 100%;
+    display: flex;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow:scroll;
+    padding-bottom: 50px;
+}
+#pics div {
+    display: flex;
+    flex-direction: column;
+}
+#pics div a {
+    text-align: center;
+    padding: 10px;
+}
+#pics div img {
+    height: 300px;
+}
+#pics a {
+    color: #000;
+}

@@ -1,0 +1,156 @@
+meter {
+    zoom: 5;
+}
+
+#inputs {
+    border: 1px solid;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+}
+#inputs > section {
+    margin: 20px 0;
+}
+#inputs > section > input {
+    margin: 5px 20px;
+    font-size: 14px;
+}
+
+section#text input {
+    width: 200px;
+    height: 25px;
+    padding-left: 10px;
+    border-width: 0 0 1px 0;
+    box-sizing: border-box;
+}
+section#text input:hover {
+    border-color: #88d;
+}
+section#text input:focus {
+    outline: none;
+    border-width: 0 0 2px 0;
+    border-color: #55f;
+    transition: border-color 1s;
+}
+
+#inputs > span {
+    display: block;
+    margin-top: 10px;
+}
+input:is([type=radio], [type=checkbox]) {
+    display: inline-block !important;
+}
+
+input:is([type=button], [type=submit], [type=reset]), ::-webkit-file-upload-button {
+    appearance: none;
+    width: 70px;
+    height: 30px;
+    background:none;
+    /* box-shadow: 6px 6px 12px #ccc; */
+    border: 0.1px solid #bbb;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+input:is([type=button], [type=submit], [type=reset]):hover, ::-webkit-file-upload-button:hover {
+    background: #eee;
+}
+input:is([type=button], [type=submit], [type=reset]):active, ::-webkit-file-upload-button:active {
+    background: #ddd;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+}
+input[type=checkbox]:hover {
+    background-color: #ccc;
+}
+input[type=checkbox]:checked {
+    background-color: #4c4;
+}
+input[type=checkbox]:hover:checked {
+    background-color: #3b3;
+}
+
+input[type=radio] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+}
+input[type=radio]:hover {
+    background-color: #ccc;
+}
+input[type=radio]:checked {
+    background-color: #aad;
+}
+
+input[type=color] {
+    appearance: none;
+    width: 30px;
+    height: 25px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input:is([type=date], [type=datetime-local], [type=month], [type=week], [type=time]) {
+    appearance: none;
+    height: 25px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px !important;
+}
+
+input[type=image] {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+input[type=range] {
+    appearance: none;
+    height: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 !important;
+}
+::-webkit-slider-runnable-track {
+    cursor: pointer;
+    color: #fff;
+}
+::-webkit-slider-thumb {
+    appearance: none;
+    width: 8px;
+    height: 20px;
+    border: none;
+    background-color: #6e6;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 !important;
+}
+::-webkit-slider-thumb:hover {
+    background-color: #5d5;
+}
+
+input[type=file] {
+    color: #aaa;
+    font-size: 12px !important;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./app.png" type="image/x-icon">
+    <meta name="og:image" content="./app.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>App Clicker</h1>
+    </header>
+    <main>
+        <div id="click">
+            <h2>돈: <span>0</span></h2>
+        </div>
+        <div id="ui">id: loading</div>
+        <div id="app">
+            <img id="app-img" src="./app.png">
+        </div>
+        <div id="tab">
+            <div id="tab-titles">
+                <div id="tab-upgrade-title" for="upgrade" class="active">업그레이드</div>
+                <div id="tab-ranking-title" for="ranking">랭킹</div>
+            </div>
+            <div id="tab-sections">
+                <section id="upgrade">
+                    <div id="upgrade-count">클릭당 <span id="money-per-click">1</span>원</div>
+                    <div id="upgrades">
+                        <div id="upgrade1" class="upgrade-item">
+                            <img src="./app.png">
+                            <div class="content">
+                                <div id="content-info">
+                                    <span class="name">녹는 앱</span>
+                                    <span class="desc">녹는 앱이다.</span>
+                                </div>
+                                <div class="level-div">
+                                    <span class="level">레벨 <span>0</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="ranking" hidden>
+                    <div id="reload">
+                        <button id="reload">랭킹갱신</button>
+                    </div>
+                    <div id="rank"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

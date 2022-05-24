@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container > div {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 6px 6px 12px #aaa;
+    white-space: nowrap;
+}
+
+:root {
+    --transition-speed: .4s;
+    --transition-speed2: .2s;
+}

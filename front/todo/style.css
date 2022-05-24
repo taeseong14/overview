@@ -1,0 +1,136 @@
+body {
+    overflow: hidden;
+}
+
+header, main {
+    text-align: center;
+}
+
+#make-todo {
+    display: flex;
+    justify-content: center;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+}
+#inputs input {
+    margin: 5px 5px;
+}
+
+#make-todo button {
+    width: 50px;
+    margin: 5px 5px;
+}
+
+#todos {
+    width: 400px;
+    margin: 20px auto;
+    min-height: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#todos li {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#todos li.completed .todo-item {
+    color: #aaa !important;
+    text-decoration: line-through;
+}
+#todos li.deleted:not(.showDeleted) {
+    display: none;
+}
+#todos li.deleted.showDeleted .todo-item {
+    color: #aaa !important;
+    text-decoration: line-through;
+}
+
+#todos li .todo-desc {
+    visibility: hidden;
+    color: white;
+    transform: translateY(-100%);
+    transition: transform .4s ease, visibility .2s, color .2s;
+    z-index: -1000;
+    font-size: 14px;
+}
+#todos li:hover .todo-desc {
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform .4s ease, color .5s ease;
+}
+#todos li:not(.completed):hover .todo-desc {
+    color: #333;
+}
+#todos li.completed:hover .todo-desc {
+    color: #aaa;
+}
+#todos li:not(.completed) .todo-item:hover .todo-desc {
+    color: #aaa !important;
+}
+
+#todos li:not(.deleted) .todo-item {
+    cursor: pointer;
+}
+.todo-item {
+    display: flex;
+    flex-direction: column;
+    height: 43px;
+}
+.todo-item:hover {
+    color: #aaa !important;
+    text-decoration: line-through;
+}
+
+.button, .button button {
+    height: 100%;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+
+
+#deleted {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: .3s ease;
+    width: 150px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+#deleted.show {
+    transform: translate(-50%, -60px);
+    transition: .5s ease;
+}
+#deleted #deleted-cancle {
+    color: #77f;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#options {
+    margin-top: 20px;
+}
+#options input, #options label {
+    cursor: pointer;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta property="og:url" content="https://b-p.kro.kr/bnw">
+    <meta property="og:type" content="website">
+    <meta property="og:tile" content="bnw">
+    <meta property="og:description" content="bnw내요">
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+    <title>BNW</title>
+    <div id="hi"></div>
+    <div id="bye"></div>
+    <div id="mid"></div>
+    
+    <span id="share">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111683.png" alt="kakaotalk share" onclick="shareKakao()">
+        <img src="https://iconape.com/wp-content/png_logo_vector/facebook-square.png" alt="facebook share" onclick="shareFB()">
+    </span>
+    
+    <script>
+        document.title = '눈뽕';
+        
+        let b = true;
+        let i = 0;
+        let d = false;
+        const di = 10;
+        setInterval(() => {
+            b = !b;
+            
+            document.body.style.backgroundColor = 
+            mid.style.backgroundColor = b ? '#fff' : '#000';
+            
+            hi.style.backgroundColor = 
+            bye.style.backgroundColor = b ? '#000' : '#fff';
+            
+            i += d?(i==0?(d=false,di):-di):(i>=250?(d=true,-di):di);
+            hi.style.borderRadius = 
+            mid.style.borderRadius =
+            bye.style.borderRadius = i + 'px';
+        }, 50);
+        
+        Kakao.init('59e115578b5a8374433fc8b40da762d0');
+        function shareKakao() {
+            Kakao.Link.sendScrap({
+                requestUrl: location.origin,
+                templateId: 76140,
+                templateArgs: {
+                    title: '조은거',
+                    desc: '',
+                    button: '바로가기',
+                }
+            })
+        }
+        
+        function shareFB() {
+            open('http://www.facebook.com/sharer.php?u=https://rediect.taeseong14.repl.co?u=//b-p.kro.kr/bnw');
+        }
+    </script>
+    
+    <style>
+        div {
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #hi {
+            width: 500px;
+            height: 500px;
+            background-color: #000;
+            z-index: -2;
+        }
+        #mid {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            z-index: -1;
+        }
+        #bye {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+        
+        #share {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            text-align: right;
+        }
+        #share img {
+            width: 50px;
+        }
+    </style>
+</body>
+</html>

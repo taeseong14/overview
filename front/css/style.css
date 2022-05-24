@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    background: radial-gradient(circle, #484848, #2f3031);
+    color: transparent;
+    min-height: 100vh;
+    overflow: hidden;
+}
+body::before,
+body::after {
+    bottom: 0;
+    display: block;
+    height: 25vw;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25vw;
+}
+body::before {
+    content: "CSS IS AWESOME";
+    font: 700 7vw/7.5vw Arial, sans-serif;
+    padding: 1.5vw;
+    text-align: left;
+    z-index: 2;
+}
+body::after {
+    background-color: white;
+    border: 0.5vw solid black;
+    /* box-shadow: 0 0 2vw black; */
+    content: "";
+    z-index: 1;
+}
+@supports (mix-blend-mode: difference) {
+    body::before {
+        color: white;
+        mix-blend-mode: difference;
+    }
+}

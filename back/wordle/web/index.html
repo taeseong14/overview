@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta property="og:image" content="og.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>WORDLE!</title>
+</head>
+<body>
+    <h1>WORDLE</h1>
+    <div id="boxs"></div>
+    <div id="keyboard">
+        <div class="keyboard-line">
+            <div class="key">Q</div>
+            <div class="key">W</div>
+            <div class="key">E</div>
+            <div class="key">R</div>
+            <div class="key">T</div>
+            <div class="key">Y</div>
+            <div class="key">U</div>
+            <div class="key">I</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+        </div>
+        <div class="keyboard-line">
+            <div class="key">A</div>
+            <div class="key">S</div>
+            <div class="key">D</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+        </div>
+        <div class="keyboard-line">
+            <div class="key">Z</div>
+            <div class="key">X</div>
+            <div class="key">C</div>
+            <div class="key">V</div>
+            <div class="key">B</div>
+            <div class="key">N</div>
+            <div class="key">M</div>
+        </div>
+    </div>
+    <script>
+        const container = document.querySelector('#boxs');
+        for (let i = 0; i < 5; i++) {
+            const div = document.createElement('div');
+            div.classList.add('box-line');
+            for (let i = 0; i < 5; i++) {
+                const child = document.createElement('div');
+                child.classList.add('box');
+                div.appendChild(child);
+            }
+            container.appendChild(div);
+        }
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>
