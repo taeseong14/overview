@@ -5,5 +5,6 @@ router.get('/wa', (req, res) => {
 
 router.use('/wordle', require('./wordle'));
 router.use('/clicker', require('./clicker'));
+router.use('/api', require('./api'));
 
 module.exports = router;
