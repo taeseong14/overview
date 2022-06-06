@@ -12,9 +12,10 @@ profile_checkbox.innerHTML = '';
     profile_checkbox.appendChild(radio);
 });
 
-let profile_intervalIndex = 0;
 let profile_interval = setInterval(() => {
-    profile_checkbox.querySelectorAll('input')[++profile_intervalIndex % profile_checkbox.querySelectorAll('input').length].click();
+    let index = [...profile_checkbox.querySelectorAll('input')].findIndex(radio => radio.checked) + 1;
+    if (index > 5) index = 0;
+    profile_checkbox.querySelectorAll('input')[index].click();
 }, 3000);
 
 const profileImageTab = document.querySelector('#profile-image-tab');
