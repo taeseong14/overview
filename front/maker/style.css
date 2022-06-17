@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'KyoboHand', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    resize: none;
+    width: 250px;
+    height: 60px;
+}
+
+canvas {
+    border: 1px solid #777;
+    border-radius: 3px;
+}
+
+button {
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e0eafa;
+    border: 1px solid #aad;
+}
