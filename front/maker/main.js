@@ -21,14 +21,19 @@ function init() {
     ctx.drawImage(img, 0, 0, width, height);
 }
 
+let lastText;
+let first = true;
+
 const form = document.querySelector('form');
 form.addEventListener('submit', e => {
     e.preventDefault();
     const textarea = document.querySelector('textarea');
-    init();
-    const width = ctx.measureText(textarea.value).width;
-    const fontSize = ctx.font.split('px')[0];
-    (function() {
+    if (!textarea.value || textarea.value === lastText) return;
+    lastText = textarea.value;
+    (fill = function() {
+        init();
+        const width = ctx.measureText(textarea.value).width;
+        const fontSize = ctx.font.split('px')[0];
         const texts = textarea.value.split('\n');
         if (texts.length === 1) {
             ctx.textBaseline = 'middle';
@@ -45,5 +50,24 @@ form.addEventListener('submit', e => {
             ctx.fillText(text, center[0], center[1] - ((texts.length / 2 |0) - i) * height);
         })
     })();
+    if (first) {
+        first = false;
+        fill();
+    }
     textarea.value = '';
-})
+});
+
+const exportBtn = document.querySelector('#export');
+exportBtn.addEventListener('click', () => {
+    if (!lastText) return;
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = `${lastText}.png`;
+    a.click();
+});
+
+const copyBtn = document.querySelector('#copy');
+copyBtn.addEventListener('click', () => {
+    if (!lastText) return;
+    canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]));
+});
