@@ -12,7 +12,6 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    font-family: 'KyoboHand', sans-serif;
 }
 
 main {
@@ -21,10 +20,24 @@ main {
     align-items: center;
 }
 
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
 textarea {
     resize: none;
     width: 250px;
     height: 60px;
+    font-family: 'KyoboHand', sans-serif;
+    font-size: 18px;
+}
+
+#form-btn button {
+    margin: 0;
 }
 
 canvas {

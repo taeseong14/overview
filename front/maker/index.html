@@ -10,12 +10,18 @@
 <body>
     <main>
         <form>
-            <textarea type="text" placeholder="text" autofocus></textarea>
-            <button id="make">만들기</button>
+            <div id="form-textarea">
+                <textarea type="text" placeholder="text" autofocus></textarea>
+            </div>
+            <div id="form-btn">
+                <button id="make">Make</button>
+            </div>
         </form>
         <canvas id="canvas"></canvas>
-        <button id="copy">Copy</button>
-        <button id="export">Download</button>
+        <div id="btns">
+            <button id="copy-btn">Copy</button>
+            <button id="export">Download</button>
+        </div>
     </main>
     <script src="./main.js"></script>
 </body>

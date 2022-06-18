@@ -16,9 +16,19 @@ const img = document.createElement('img');
 img.src = './dohwaga.png';
 img.onload = init;
 
+let watermark = true;
+
 function init() {
     ctx.clearRect(0, 0, width, height);
     ctx.drawImage(img, 0, 0, width, height);
+    if (watermark) {
+        const lastFont = ctx.font;
+        ctx.font = '10px sans-serif';
+        ctx.fillStyle = '#a9a';
+        ctx.fillText('b-p.msub.kr/maker', width - 45, height - 6);
+        ctx.font = lastFont;
+        ctx.fillStyle = '#000';
+    }
 }
 
 let lastText;
@@ -66,7 +76,7 @@ exportBtn.addEventListener('click', () => {
     a.click();
 });
 
-const copyBtn = document.querySelector('#copy');
+const copyBtn = document.querySelector('#copy-btn');
 copyBtn.addEventListener('click', () => {
     if (!lastText) return;
     canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]));
