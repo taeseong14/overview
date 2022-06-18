@@ -1,0 +1,10 @@
+{
+  "name": "overview",
+  "description": "바풀 프론트/백엔드 모아둔대",
+  "main": "server.js",
+  "author": "taeseong14",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
