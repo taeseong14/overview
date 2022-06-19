@@ -25,7 +25,7 @@ function init() {
         const lastFont = ctx.font;
         ctx.font = '10px sans-serif';
         ctx.fillStyle = '#a9a';
-        ctx.fillText('b-p.msub.kr/maker', width - 45, height - 6);
+        ctx.fillText('mkr.kro.kr', width - 25, height - 6);
         ctx.font = lastFont;
         ctx.fillStyle = '#000';
     }
