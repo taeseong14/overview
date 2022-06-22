@@ -35,9 +35,9 @@ let lastText;
 let first = true;
 
 const form = document.querySelector('form');
+const textarea = document.querySelector('textarea');
 form.addEventListener('submit', e => {
     e.preventDefault();
-    const textarea = document.querySelector('textarea');
     if (!textarea.value || textarea.value === lastText) return;
     lastText = textarea.value;
     (fill = function() {
@@ -67,6 +67,13 @@ form.addEventListener('submit', e => {
     textarea.value = '';
 });
 
+textarea.addEventListener('keydown', e => {
+    if (e.ctrlKey && e.key === 'Enter') {
+        e.preventDefault();
+        document.querySelector('button#make').click();
+    }
+})
+
 const exportBtn = document.querySelector('#export');
 exportBtn.addEventListener('click', () => {
     if (!lastText) return;
@@ -81,3 +88,13 @@ copyBtn.addEventListener('click', () => {
     if (!lastText) return;
     canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]));
 });
+
+const text = location.pathname.slice(7);
+if (text) {
+    window.onload = () => {
+        textarea.value = decodeURIComponent(text);
+        document.querySelector('button#make').click();
+        textarea.value = decodeURIComponent(text);
+        textarea.select();
+    }
+}
