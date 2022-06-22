@@ -14,7 +14,10 @@ const center = [textStart[0] + textWidth[0] / 2, textStart[1] + textWidth[1] / 2
 // insert image
 const img = document.createElement('img');
 img.src = './dohwaga.png';
-img.onload = init;
+img.onload = () => {
+    init();
+    initPath?.();
+}
 
 let watermark = true;
 
@@ -91,7 +94,7 @@ copyBtn.addEventListener('click', () => {
 
 const text = location.pathname.slice(7);
 if (text) {
-    window.onload = () => {
+    function initPath() {
         textarea.value = decodeURIComponent(text);
         document.querySelector('button#make').click();
         textarea.value = decodeURIComponent(text);
